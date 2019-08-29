@@ -1,6 +1,6 @@
 package api
 
-import "github.com/cloudtask/cloudtask-center/api/middleware"
+import "cloudtask-center/api/middleware"
 
 import (
 	"crypto/tls"

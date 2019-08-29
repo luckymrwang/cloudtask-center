@@ -1,14 +1,18 @@
 package mongo
 
-import "github.com/cloudtask/cloudtask-center/cache/driver/types"
-import "github.com/cloudtask/common/models"
-import "github.com/cloudtask/libtools/gounits/system"
-import "gopkg.in/mgo.v2/bson"
-import mgo "gopkg.in/mgo.v2"
-
 import (
+	"fmt"
+
+	"cloudtask-center/cache/driver/types"
+
+	"github.com/cloudtask/common/models"
+	"github.com/cloudtask/libtools/gounits/system"
+	"gopkg.in/mgo.v2/bson"
+
 	"strings"
 	"time"
+
+	mgo "gopkg.in/mgo.v2"
 )
 
 const (
@@ -93,6 +97,8 @@ func generateHostURL(configs MgoConfigs) (string, error) {
 		}
 	}
 
+	fmt.Println(optsStr)
+
 	mgoURL := "mongodb://" + authStr + configs.Hosts + "/" + configs.DataBase
 	if optsStr != "" {
 		mgoURL = mgoURL + "?" + optsStr
@@ -125,19 +131,22 @@ func (engine *Engine) Open() error {
 	if err != nil {
 		return err
 	}
+	fmt.Println("mgoUrl:", mgoURL)
+	mgoURL = "mongodb://127.0.0.1:27017/cloudtask"
 
 	session, err := mgo.Dial(mgoURL)
 	if err != nil {
 		return err
 	}
+	fmt.Println("mongo:", session)
 
 	session.SetMode(mgo.Strong, true)
 	session.SetPoolLimit(maxPoolSize)
 	engine.globalSession = session
-	if engine.stopCh == nil {
-		engine.stopCh = make(chan struct{})
-		go engine.pulseSessionLoop()
-	}
+	// if engine.stopCh == nil {
+	// 	engine.stopCh = make(chan struct{})
+	// 	go engine.pulseSessionLoop()
+	// }
 	return nil
 }
 

@@ -1,7 +1,7 @@
 package api
 
-import "github.com/cloudtask/cloudtask-center/cache"
-import "github.com/cloudtask/cloudtask-center/scheduler"
+import "cloudtask-center/cache"
+import "cloudtask-center/scheduler"
 import "github.com/cloudtask/common/models"
 import "github.com/cloudtask/libtools/gounits/logger"
 

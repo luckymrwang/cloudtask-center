@@ -1,6 +1,6 @@
 package server
 
-import "github.com/cloudtask/cloudtask-center/cache"
+import "cloudtask-center/cache"
 import "github.com/cloudtask/libtools/gounits/logger"
 import "github.com/cloudtask/libtools/gzkwrapper"
 

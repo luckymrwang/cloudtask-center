@@ -1,7 +1,7 @@
 package api
 
-import "github.com/cloudtask/cloudtask-center/cache"
-import "github.com/cloudtask/cloudtask-center/notify"
+import "cloudtask-center/cache"
+import "cloudtask-center/notify"
 import "github.com/cloudtask/common/models"
 
 import (

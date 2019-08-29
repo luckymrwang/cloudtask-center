@@ -1,9 +1,9 @@
 package etc
 
-import "github.com/cloudtask/cloudtask-center/cache"
-import "github.com/cloudtask/cloudtask-center/cache/driver/types"
-import "github.com/cloudtask/cloudtask-center/notify"
-import "github.com/cloudtask/cloudtask-center/scheduler"
+import "cloudtask-center/cache"
+import "cloudtask-center/cache/driver/types"
+import "cloudtask-center/notify"
+import "cloudtask-center/scheduler"
 import "github.com/cloudtask/libtools/gounits/logger"
 import "github.com/cloudtask/libtools/gounits/system"
 import "github.com/cloudtask/libtools/gzkwrapper"
@@ -226,6 +226,7 @@ func CacheConfigs() *cache.CacheConfigs {
 			}
 			for backend, paramters := range SystemConfig.Cache.StorageDriverConfigs {
 				configs.StorageBackend = types.Backend(backend)
+
 				configs.StorageDriverParameters = paramters
 				break
 			}

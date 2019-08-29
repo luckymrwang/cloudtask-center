@@ -1,6 +1,6 @@
 package ngcloud
 
-import "github.com/cloudtask/cloudtask-center/cache/driver/types"
+import "cloudtask-center/cache/driver/types"
 import "github.com/cloudtask/common/models"
 import "github.com/cloudtask/libtools/gounits/httpx"
 

@@ -1,21 +1,21 @@
 package cache
 
-import _ "github.com/cloudtask/cloudtask-center/cache/driver/mongo"
-import _ "github.com/cloudtask/cloudtask-center/cache/driver/ngcloud"
-import "github.com/cloudtask/cloudtask-center/cache/driver"
-import "github.com/cloudtask/cloudtask-center/cache/driver/types"
-import "github.com/cloudtask/common/models"
-import "github.com/cloudtask/libtools/gounits/httpx"
-import "github.com/cloudtask/libtools/gounits/logger"
-import "github.com/cloudtask/libtools/gzkwrapper"
-
 import (
 	"bytes"
+	"cloudtask-center/cache/driver"
+	_ "cloudtask-center/cache/driver/mongo"
+	_ "cloudtask-center/cache/driver/ngcloud"
+	"cloudtask-center/cache/driver/types"
 	"encoding/json"
 	"net"
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/cloudtask/common/models"
+	"github.com/cloudtask/libtools/gounits/httpx"
+	"github.com/cloudtask/libtools/gounits/logger"
+	"github.com/cloudtask/libtools/gzkwrapper"
 )
 
 //ReadLocationAllocFunc is exported

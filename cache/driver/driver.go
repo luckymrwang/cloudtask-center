@@ -1,6 +1,6 @@
 package driver
 
-import "github.com/cloudtask/cloudtask-center/cache/driver/types"
+import "cloudtask-center/cache/driver/types"
 import "github.com/cloudtask/common/models"
 
 import (

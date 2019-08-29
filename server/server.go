@@ -1,9 +1,9 @@
 package server
 
-import "github.com/cloudtask/cloudtask-center/cache"
-import "github.com/cloudtask/cloudtask-center/etc"
-import "github.com/cloudtask/cloudtask-center/notify"
-import "github.com/cloudtask/cloudtask-center/scheduler"
+import "cloudtask-center/cache"
+import "cloudtask-center/etc"
+import "cloudtask-center/notify"
+import "cloudtask-center/scheduler"
 import "github.com/cloudtask/common/models"
 import "github.com/cloudtask/libtools/gzkwrapper"
 import "github.com/cloudtask/libtools/gounits/logger"

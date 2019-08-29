@@ -1,6 +1,6 @@
 package api
 
-import "github.com/cloudtask/cloudtask-center/etc"
+import "cloudtask-center/etc"
 import "github.com/cloudtask/libtools/gzkwrapper"
 import "github.com/gorilla/mux"
 

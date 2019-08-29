@@ -1,10 +1,10 @@
 package main
 
-import "github.com/cloudtask/libtools/gounits/system"
-
 import (
 	"log"
 	"os"
+
+	"github.com/cloudtask/libtools/gounits/system"
 )
 
 func main() {
