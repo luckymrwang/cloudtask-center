@@ -1,6 +1,6 @@
 package api
 
-import "github.com/cloudtask/common/models"
+import "cloudtask/common/models"
 import "github.com/gorilla/mux"
 
 import (

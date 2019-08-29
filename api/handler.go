@@ -2,7 +2,7 @@ package api
 
 import "cloudtask-center/cache"
 import "cloudtask-center/notify"
-import "github.com/cloudtask/common/models"
+import "cloudtask/common/models"
 
 import (
 	"crypto/md5"

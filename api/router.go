@@ -1,7 +1,7 @@
 package api
 
 import "cloudtask-center/etc"
-import "github.com/cloudtask/libtools/gzkwrapper"
+import "cloudtask/libtools/gzkwrapper"
 import "github.com/gorilla/mux"
 
 import (

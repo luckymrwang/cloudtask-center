@@ -1,7 +1,7 @@
 package cache
 
-import "github.com/cloudtask/common/models"
-import "github.com/cloudtask/libtools/gounits/algorithm"
+import "cloudtask/common/models"
+import "cloudtask/libtools/gounits/algorithm"
 
 import (
 	"hash/crc32"

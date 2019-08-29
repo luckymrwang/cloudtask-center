@@ -1,8 +1,8 @@
 package server
 
 import "cloudtask-center/cache"
-import "github.com/cloudtask/libtools/gounits/logger"
-import "github.com/cloudtask/libtools/gzkwrapper"
+import "cloudtask/libtools/gounits/logger"
+import "cloudtask/libtools/gzkwrapper"
 
 func (server *CenterServer) OnZkWrapperNodeHandlerFunc(nodestore *gzkwrapper.NodeStore) {
 

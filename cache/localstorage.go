@@ -1,6 +1,6 @@
 package cache
 
-import "github.com/cloudtask/common/models"
+import "cloudtask/common/models"
 import lru "github.com/hashicorp/golang-lru"
 
 import (

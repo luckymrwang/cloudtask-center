@@ -1,6 +1,6 @@
 package notify
 
-import "github.com/cloudtask/libtools/gounits/rand"
+import "cloudtask/libtools/gounits/rand"
 
 import (
 	"bytes"

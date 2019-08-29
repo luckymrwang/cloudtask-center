@@ -1,6 +1,6 @@
 package cache
 
-import "github.com/cloudtask/libtools/gounits/httpx"
+import "cloudtask/libtools/gounits/httpx"
 
 import (
 	"context"

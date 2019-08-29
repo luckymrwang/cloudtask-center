@@ -1,7 +1,7 @@
 package ngcloud
 
-import "github.com/cloudtask/common/models"
-import "github.com/cloudtask/libtools/gounits/httpx"
+import "cloudtask/common/models"
+import "cloudtask/libtools/gounits/httpx"
 
 //PageData is exported
 type PageData struct {

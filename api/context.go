@@ -1,6 +1,6 @@
 package api
 
-import "github.com/cloudtask/libtools/gounits/rand"
+import "cloudtask/libtools/gounits/rand"
 
 import (
 	"context"

@@ -1,7 +1,7 @@
 package driver
 
 import "cloudtask-center/cache/driver/types"
-import "github.com/cloudtask/common/models"
+import "cloudtask/common/models"
 
 import (
 	"fmt"

@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/cloudtask/libtools/gounits/system"
+	"cloudtask/libtools/gounits/system"
 )
 
 func main() {

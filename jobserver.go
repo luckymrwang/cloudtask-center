@@ -3,10 +3,10 @@ package main
 import "cloudtask-center/api"
 import "cloudtask-center/etc"
 import "cloudtask-center/server"
-import "github.com/cloudtask/libtools/gounits/flocker"
-import "github.com/cloudtask/libtools/gounits/logger"
-import "github.com/cloudtask/libtools/gounits/rand"
-import "github.com/cloudtask/libtools/gounits/system"
+import "cloudtask/libtools/gounits/flocker"
+import "cloudtask/libtools/gounits/logger"
+import "cloudtask/libtools/gounits/rand"
+import "cloudtask/libtools/gounits/system"
 
 import (
 	"flag"

@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cloudtask/common/models"
-	"github.com/cloudtask/libtools/gounits/httpx"
-	"github.com/cloudtask/libtools/gounits/logger"
-	"github.com/cloudtask/libtools/gzkwrapper"
+	"cloudtask/common/models"
+	"cloudtask/libtools/gounits/httpx"
+	"cloudtask/libtools/gounits/logger"
+	"cloudtask/libtools/gzkwrapper"
 )
 
 //ReadLocationAllocFunc is exported

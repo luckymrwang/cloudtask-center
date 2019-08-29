@@ -1,6 +1,6 @@
 package middleware
 
-import "github.com/cloudtask/libtools/gounits/logger"
+import "cloudtask/libtools/gounits/logger"
 
 import (
 	"net/http"

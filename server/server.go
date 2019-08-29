@@ -4,9 +4,9 @@ import "cloudtask-center/cache"
 import "cloudtask-center/etc"
 import "cloudtask-center/notify"
 import "cloudtask-center/scheduler"
-import "github.com/cloudtask/common/models"
-import "github.com/cloudtask/libtools/gzkwrapper"
-import "github.com/cloudtask/libtools/gounits/logger"
+import "cloudtask/common/models"
+import "cloudtask/libtools/gzkwrapper"
+import "cloudtask/libtools/gounits/logger"
 
 import (
 	"fmt"

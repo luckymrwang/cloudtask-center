@@ -1,9 +1,9 @@
 package scheduler
 
 import "cloudtask-center/cache"
-import "github.com/cloudtask/common/models"
-import "github.com/cloudtask/libtools/gzkwrapper"
-import "github.com/cloudtask/libtools/gounits/logger"
+import "cloudtask/common/models"
+import "cloudtask/libtools/gzkwrapper"
+import "cloudtask/libtools/gounits/logger"
 
 /*
  任务调配器
