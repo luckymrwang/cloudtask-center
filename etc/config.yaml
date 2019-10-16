@@ -3,7 +3,7 @@ pidfile: ./jobserver.pid
 retrystartup: true
 useserverconfig: true
 cluster:
-  hosts: 127.0.0.1:2181
+  hosts: 127.0.0.1:2379
   root: /cloudtask
   pulse: 30s
   timeout: 60s

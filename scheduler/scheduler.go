@@ -1,9 +1,11 @@
 package scheduler
 
-import "cloudtask-center/cache"
-import "cloudtask/common/models"
-import "cloudtask/libtools/gzkwrapper"
-import "cloudtask/libtools/gounits/logger"
+import (
+	"cloudtask-center/cache"
+	"cloudtask/common/models"
+	"cloudtask/libtools/gounits/logger"
+	"cloudtask/libtools/gzkwrapper"
+)
 
 /*
  任务调配器
@@ -45,7 +47,6 @@ type Scheduler struct {
 
 //NewScheduler is exported
 func NewScheduler(configs *SchedulerConfigs, cacheRepository *cache.CacheRepository) *Scheduler {
-
 	return &Scheduler{
 		SchedulerConfigs: configs,
 		cacheRepository:  cacheRepository,

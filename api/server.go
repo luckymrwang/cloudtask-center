@@ -1,8 +1,7 @@
 package api
 
-import "cloudtask-center/api/middleware"
-
 import (
+	"cloudtask-center/api/middleware"
 	"crypto/tls"
 	"fmt"
 	"net"
@@ -38,7 +37,6 @@ type Server struct {
 }
 
 func NewServer(hosts []string, enableCors bool, tlsConfig *tls.Config) *Server {
-
 	router := NewRouter(enableCors, store)
 	return &Server{
 		hosts:     hosts,

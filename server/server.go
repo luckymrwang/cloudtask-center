@@ -1,14 +1,13 @@
 package server
 
-import "cloudtask-center/cache"
-import "cloudtask-center/etc"
-import "cloudtask-center/notify"
-import "cloudtask-center/scheduler"
-import "cloudtask/common/models"
-import "cloudtask/libtools/gzkwrapper"
-import "cloudtask/libtools/gounits/logger"
-
 import (
+	"cloudtask-center/cache"
+	"cloudtask-center/etc"
+	"cloudtask-center/notify"
+	"cloudtask-center/scheduler"
+	"cloudtask/common/models"
+	"cloudtask/libtools/gounits/logger"
+	"cloudtask/libtools/gzkwrapper"
 	"fmt"
 	"time"
 )
@@ -29,7 +28,6 @@ type CenterServer struct {
 
 //NewCenterServer is exported
 func NewCenterServer(key string) (*CenterServer, error) {
-
 	clusterConfigs := etc.ClusterConfigs()
 	if clusterConfigs == nil {
 		return nil, fmt.Errorf("cluster configs invalid.")
@@ -143,6 +141,7 @@ func (server *CenterServer) initServerConfig() {
 
 	//read config data.
 	data, err := server.Master.Get(server.ConfigPath)
+	fmt.Println("data:", data)
 	if err != nil {
 		logger.WARN("[#server] get serverConfig error %s, used local configs.", err)
 		return
@@ -315,6 +314,7 @@ func (server *CenterServer) procLocationAlloc(location string, addServers []*mod
 	nodeStore := gzkwrapper.NewNodeStore()
 	for _, addServer := range addServers {
 		nodes := server.Master.GetNodes(location, addServer.IPAddr, addServer.Name)
+		logger.INFO("[#procLocationAlloc#] server[%v] nodes[%v]", addServer, nodes)
 		for key, node := range nodes {
 			server.CacheRepository.CreateWorker(key, node)
 			nodeStore.New[key] = node

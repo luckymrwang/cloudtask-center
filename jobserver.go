@@ -1,14 +1,13 @@
 package main
 
-import "cloudtask-center/api"
-import "cloudtask-center/etc"
-import "cloudtask-center/server"
-import "cloudtask/libtools/gounits/flocker"
-import "cloudtask/libtools/gounits/logger"
-import "cloudtask/libtools/gounits/rand"
-import "cloudtask/libtools/gounits/system"
-
 import (
+	"cloudtask-center/api"
+	"cloudtask-center/etc"
+	"cloudtask-center/server"
+	"cloudtask/libtools/gounits/flocker"
+	"cloudtask/libtools/gounits/logger"
+	"cloudtask/libtools/gounits/rand"
+	"cloudtask/libtools/gounits/system"
 	"flag"
 	"fmt"
 	"os"
@@ -36,7 +35,6 @@ func init() {
 
 //NewJobServer is exported
 func NewJobServer() (*JobServer, error) {
-
 	var filePath string
 	flag.StringVar(&filePath, "f", "./etc/config.yaml", "jobserver etc file.")
 	flag.Parse()
@@ -91,6 +89,7 @@ func (server *JobServer) Startup() error {
 		startCh chan bool = make(chan bool, 1)
 	)
 
+	fmt.Println("startup")
 	go func(c <-chan bool) {
 		select {
 		case <-c:

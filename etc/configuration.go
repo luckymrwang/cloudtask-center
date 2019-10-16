@@ -1,16 +1,14 @@
 package etc
 
-import "cloudtask-center/cache"
-import "cloudtask-center/cache/driver/types"
-import "cloudtask-center/notify"
-import "cloudtask-center/scheduler"
-import "cloudtask/libtools/gounits/logger"
-import "cloudtask/libtools/gounits/system"
-import "cloudtask/libtools/gzkwrapper"
-import "cloudtask/common/models"
-import "gopkg.in/yaml.v2"
-
 import (
+	"cloudtask-center/cache"
+	"cloudtask-center/cache/driver/types"
+	"cloudtask-center/notify"
+	"cloudtask-center/scheduler"
+	"cloudtask/common/models"
+	"cloudtask/libtools/gounits/logger"
+	"cloudtask/libtools/gounits/system"
+	"cloudtask/libtools/gzkwrapper"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -19,6 +17,8 @@ import (
 	"path/filepath"
 	"strconv"
 	"sync"
+
+	"gopkg.in/yaml.v2"
 )
 
 var (
@@ -188,7 +188,6 @@ func SchedulerConfigs() *scheduler.SchedulerConfigs {
 
 //ClusterConfigs is exported
 func ClusterConfigs() *gzkwrapper.ServerArgs {
-
 	if SystemConfig != nil {
 		return &gzkwrapper.ServerArgs{
 			Hosts:     SystemConfig.Cluster.Hosts,
@@ -208,7 +207,6 @@ func ClusterConfigs() *gzkwrapper.ServerArgs {
 
 //Notifications is exported
 func Notifications() []notify.EndPoint {
-
 	if SystemConfig != nil {
 		return SystemConfig.Notifications.EndPoints
 	}
@@ -217,7 +215,6 @@ func Notifications() []notify.EndPoint {
 
 //CacheConfigs is exported
 func CacheConfigs() *cache.CacheConfigs {
-
 	var configs *cache.CacheConfigs
 	if SystemConfig != nil {
 		if len(SystemConfig.Cache.StorageDriverConfigs) > 0 {
@@ -237,7 +234,6 @@ func CacheConfigs() *cache.CacheConfigs {
 
 //LoggerConfigs is exported
 func LoggerConfigs() *logger.Args {
-
 	if SystemConfig != nil {
 		return &logger.Args{
 			FileName: SystemConfig.Logger.LogFile,
