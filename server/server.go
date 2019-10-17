@@ -93,7 +93,7 @@ func (server *CenterServer) Startup(startCh chan<- bool) error {
 	}()
 
 	if err = server.Master.Open(); err != nil {
-		logger.ERROR("[#server#] cluster zookeeper open failure, %s", err)
+		logger.ERROR("[#server#] cluster etcd open failure, %s", err)
 		return err
 	}
 
@@ -122,7 +122,7 @@ func (server *CenterServer) Stop() error {
 	server.closeServerConfig()
 	server.Master.Clear()
 	if err := server.Master.Close(); err != nil {
-		logger.ERROR("[#server] cluster zookeeper close error, %s", err.Error())
+		logger.ERROR("[#server] cluster etcd close error, %s", err.Error())
 		return err
 	}
 	return nil
