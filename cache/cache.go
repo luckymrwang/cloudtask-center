@@ -2,16 +2,18 @@ package cache
 
 import (
 	"bytes"
-	"cloudtask-center/cache/driver"
-	_ "cloudtask-center/cache/driver/mongo"
-	_ "cloudtask-center/cache/driver/ngcloud"
-	"cloudtask-center/cache/driver/types"
+
 	"encoding/json"
 	"net"
 	"net/http"
 	"strings"
 	"time"
 
+	"cloudtask-center/cache/driver"
+	_ "cloudtask-center/cache/driver/etcd"
+	_ "cloudtask-center/cache/driver/mongo"
+	_ "cloudtask-center/cache/driver/ngcloud"
+	"cloudtask-center/cache/driver/types"
 	"cloudtask/common/models"
 	"cloudtask/libtools/gounits/httpx"
 	"cloudtask/libtools/gounits/logger"
@@ -49,7 +51,6 @@ type CacheRepository struct {
 
 //NewCacheRepository is expotred
 func NewCacheRepository(configs *CacheConfigs) (*CacheRepository, error) {
-
 	storageDriver, err := driver.NewDriver(configs.StorageBackend, configs.StorageDriverParameters)
 	if err != nil {
 		return nil, err

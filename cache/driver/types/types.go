@@ -9,6 +9,8 @@ const (
 	MONGO Backend = "mongo"
 	//NGCLOUD, newegg clouddata driver.
 	NGCLOUD Backend = "ngcloud"
+	//ETCD, etcd driver
+	ETCD Backend = "etcd"
 )
 
 var (

@@ -17,24 +17,18 @@ scheduler:
 cache:
   lrusize: 1024
   storagedriver:
-      mongo:
-        hosts: 127.0.0.1:27017
-        database: cloudtask
-        auth: {
-         user: ,
-         password:  
-        }
+    etcd:
+      hosts: 127.0.0.1:2379
 notifications:
-    endpoints:
-      - name: smtp
-        host: smtp.example.com
-        port: 25
-        user:
-        password:
-        sender: cloudtask@example.com
-        enabled: true
+  endpoints:
+    - name: smtp
+      host: smtp.example.com
+      port: 25
+      user:
+      password:
+      sender: cloudtask@example.com
+      enabled: true
 logger:
-    logfile: ./logs/jobserver.log
-    loglevel: error
-    logsize: 20971520
-...
+  logfile: ./logs/jobserver.log
+  loglevel: error
+  logsize: 20971520
